@@ -8,7 +8,3 @@ env/
 
 artifacts/
 *.joblib
-
-# IDE
-.vscode/
-.idea/
