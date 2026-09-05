@@ -1,0 +1,14 @@
+# virtual environment
+
+.venv/
+venv/
+env/
+
+#ml runs
+
+artifacts/
+*.joblib
+
+# IDE
+.vscode/
+.idea/
