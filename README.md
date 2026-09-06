@@ -55,15 +55,15 @@ flowchart TD
 
 ---
 
-## 📊 Machine Learning Model & Performance
+## 📊 Machine Learning Model & Notebook Performance
 
-During model development, multiple regression algorithms were evaluated and tuned:
+The evaluation metrics below are computed directly from model training in [`notebooks/health_premium_common.ipynb`](notebooks/health_premium_common.ipynb):
 
-| Model | R² Score | RMSE | Key Highlights |
-| :--- | :---: | :---: | :--- |
-| **Linear Regression** | ~0.78 | Baseline | Basic linear relationship modeling |
-| **Ridge Regression** | ~0.78 | Regularized | L2 penalty to handle multicollinearity |
-| **XGBoost Regressor (Best)** | **~0.88** | **Lowest** | **RandomizedSearchCV hyperparameter tuned** |
+| Model | $R^2$ Score | RMSE | MSE | Model Highlights |
+| :--- | :---: | :---: | :---: | :--- |
+| **Linear Regression** | `0.9542` | `1,933.61` | `3,738,839.77` | Baseline linear model |
+| **Ridge Regression (alpha=1)** | `0.9542` | `1,933.44` | `3,738,181.58` | Regularized model handling multicollinearity |
+| **XGBoost Regressor (Best)** | **`0.9938`** | **`710.49`** | **`504,800.28`** | **Hyperparameter tuned via RandomizedSearchCV (`CV R² = 0.9926`)** |
 
 ### Top Predictive Drivers
 1. **Total Medical Risk Score** (Derived from medical history)
