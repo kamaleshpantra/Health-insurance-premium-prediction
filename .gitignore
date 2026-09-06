@@ -1,10 +1,11 @@
 # virtual environment
-
 .venv/
 venv/
 env/
 
-#ml runs
+# python bytecode
+__pycache__/
+*.pyc
 
-artifacts/
-*.joblib
+# OS files
+.DS_Store
