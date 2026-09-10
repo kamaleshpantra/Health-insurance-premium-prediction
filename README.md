@@ -86,13 +86,14 @@ flowchart TD
   3. **XGBoost Regressor** (Gradient boosted decision trees)
 
 ### Step 7: Model Evaluation
+
 Evaluated performance using $R^2$ Score, Mean Squared Error (MSE), and Root Mean Squared Error (RMSE):
 
 | Model | $R^2$ Score | RMSE | MSE | Evaluation Remarks |
 | :--- | :---: | :---: | :---: | :--- |
-| **Linear Regression** | `0.9542` | `1,933.61` | `3,738,839.77` | Strong baseline performance |
-| **Ridge Regression ($\alpha=1$)** | `0.9542` | `1,933.44` | `3,738,181.58` | Stabilized linear coefficients |
-| **XGBoost Regressor (Best)** | **`0.9938`** | **`710.49`** | **`504,800.28`** | **Superior non-linear feature capture** |
+| Linear Regression | 0.9542 | 1,933.61 | 3,738,839.77 | Strong baseline performance |
+| Ridge Regression ($\alpha=1$) | 0.9542 | 1,933.44 | 3,738,181.58 | Stabilized linear coefficients |
+| **XGBoost Regressor (Best)** | **0.9938** | **710.49** | **504,800.28** | **Superior non-linear feature capture** |
 
 ### Step 8: Model Fine-Tuning & Optimization
 - Conducted hyperparameter tuning on `XGBRegressor` using `RandomizedSearchCV` with 3-fold cross-validation over parameter grid:
